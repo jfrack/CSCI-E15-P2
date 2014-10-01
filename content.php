@@ -3,11 +3,11 @@
 <div class="container">
 	<h1>xkcd Password Generator</h1>
 
-	<h3><p>Your password is: <?php echo ($password) ? $password : ''; ?> </p></h3>
+	<h3>Your password is: <?php echo ($password) ? $password : ''; ?></h3>
 
 	<h2>Generate a new password</h2>
 
-	<form method="POST" action="index.php">
+	<form class="form-horizontal" role="form" method="POST" action="index.php">
 
 		<label name="count">Number of words:</label>
 		<select name="count">
@@ -22,10 +22,6 @@
 			<option value=9 <?php echo $count == 9 ? 'selected="selected"' : ''; ?>>9</option>
 		</select><br>
 
-		<!--
-		<input type="pulldown" id="count" name="count"/><br>
-		-->
-
 		<label name="uppercase">Uppercase first letter?</label>
 		<input type="checkbox" name="uppercase" value="uppercase" <?php echo ($uppercase) ? 'checked="checked"': '' ; ?>/><br>
 
@@ -37,6 +33,13 @@
 
 		<input class="btn btn-primary" type="submit" name="submit" value="New Password"/>
 		<input class="btn" type="submit" name="reset" value="Reset"/>
-
 	</form>
+
+	<br><h3>What is this?</h3>
+	<p>
+		Originally posted on the <a href="http://xkcd.com/936/" target="_blank">xkcd</a> site by <a href="http://xkcd.com/about/" target="_blank">Randall Munroe</a>, this comic suggests that some passwords are easier to remember yet much harder to crack than others.
+		This simple application will generate such a password if you so choose to use one.
+	</p>
+
+	<img src="images/comic_strip.png" alt="password comic strip">
 </div>

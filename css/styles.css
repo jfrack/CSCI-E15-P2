@@ -1,3 +1,7 @@
-.mystyle {
-	color: blue;
+.password {
+	color: #4582ec;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	padding: 10px;
 }

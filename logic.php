@@ -23,11 +23,16 @@ if (isset($_POST['number'])) {
 } else {
 	$number = false;
 }
+if (isset($_POST['lang'])) {
+	$lang = $_POST['lang'];
+} else {
+	$lang = "English";
+}
 
 if ($words = file('en_US.txt')) {
 
 	$selected_words = [];
-	$symbols = ['!','@','#','$'];
+	$symbols = ['!','@','#','$','%','^','&','*'];
 	$numbers = [0,1,2,3,4,5,6,7,8,9];
 
 	for ($i = 0; $i < $count; $i++) {

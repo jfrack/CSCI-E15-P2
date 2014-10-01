@@ -3,9 +3,12 @@
 <div class="container">
 	<h1>xkcd Password Generator</h1>
 
-	<h3>Your password is: <?php echo ($password) ? $password : ''; ?></h3>
+	<div class="password">
+		<h2><small>Your password is:</small>
+		<?php echo ($password) ? $password : ''; ?></h2>
+	</div>
 
-	<h2>Generate a new password</h2>
+	<h3>Generate a new password</h3>
 
 	<form class="form-horizontal" role="form" method="POST" action="index.php">
 
@@ -29,10 +32,17 @@
 		<input type="checkbox" name="symbol" value="symbol" <?php echo ($symbol) ? 'checked="checked"': '' ; ?>/><br>
 
 		<label name="number">Include a number?</label>
-		<input type="checkbox" name="number" value="number" <?php echo ($number) ? 'checked="checked"': '' ; ?>/><br><br>
+		<input type="checkbox" name="number" value="number" <?php echo ($number) ? 'checked="checked"': '' ; ?>/><br>
 
-		<input class="btn btn-primary" type="submit" name="submit" value="New Password"/>
-		<input class="btn" type="submit" name="reset" value="Reset"/>
+		<label name="lang">Language:</label>
+		<select name="lang">
+			<option value="English" <?php echo $lang == "English" ? 'selected="selected"' : ''; ?>>English</option>
+			<option value="Spanish" <?php echo $lang == "Spanish" ? 'selected="selected"' : ''; ?>>Spanish</option>
+			<option value="French" <?php echo $lang == "French" ? 'selected="selected"' : ''; ?>>French</option>
+			<option value="German" <?php echo $lang == "German" ? 'selected="selected"' : ''; ?>>German</option>
+		</select><br><br>
+
+		<input class="btn btn-primary" type="submit" name="submit" value="Get a Password"/>
 	</form>
 
 	<br><h3>What is this?</h3>

@@ -31,14 +31,16 @@ if (isset($_POST['lang'])) {
 
 if ($words = file('en_US.txt')) {
 
+	// initialize vars
 	$selected_words = [];
+	$selected_symbol = "";
+	$selected_number = "";
 	$symbols = ['!','@','#','$','%','^','&','*'];
-	$numbers = [0,1,2,3,4,5,6,7,8,9];
 
 	for ($i = 0; $i < $count; $i++) {
 		// generate random number
-		$max = count($words) - 1;
-		$rand = rand(0, $max);
+		$max_words = count($words) - 1;
+		$rand = rand(0, $max_words);
 		$word = $words[$rand];
 		array_push($selected_words, $word);
 	}
@@ -51,12 +53,17 @@ if ($words = file('en_US.txt')) {
 	}
 
 	if ($symbol) {
-		//str_replace(search, replace, subject);
+		// pick a random symbol from the symbols array
+		$max_symbols = count($symbols) - 1;
+		$rand = rand(0, $max_symbols);
+		$selected_symbol = $symbols[$rand];
 	}
 
 	if ($number) {
-
+		// pick a random number
+		$selected_number = rand(0, 100);
 	}
 
-	$password = implode("- ", $selected_words);
+	// convert selected words array to a string and append number and/or symbol if requested
+	$password = implode("- ", $selected_words) . $selected_number . $selected_symbol;
 }

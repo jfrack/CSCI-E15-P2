@@ -4,8 +4,7 @@
 	<h1>xkcd Password Generator</h1>
 
 	<div class="password">
-		<h2><small>Your password is:</small>
-		<?php echo ($password) ? $password : ''; ?></h2>
+		<h2><?php echo ($password) ? $password : ''; ?></h2>
 	</div>
 
 	<h3>Generate a new password</h3>

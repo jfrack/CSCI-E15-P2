@@ -29,9 +29,9 @@ if (isset($_POST['lang'])) {
 	$lang = "English";
 }
 
-if ($words = file('en_US.txt')) {
+if ($words = file('dict/ogden_basic.txt')) {
 
-	// initialize vars
+	// initialize global vars
 	$selected_words = [];
 	$selected_symbol = "";
 	$selected_number = "";

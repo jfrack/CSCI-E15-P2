@@ -23,15 +23,34 @@ if (isset($_POST['number'])) {
 } else {
 	$number = false;
 }
-if (isset($_POST['lang'])) {
-	$lang = $_POST['lang'];
+if (isset($_POST['theme'])) {
+	$theme = $_POST['theme'];
+	switch ($theme) {
+		case 'ogden':
+			$dict = "dict/ogden.txt";
+			break;
+		case 'picture':
+			$dict = "dict/picture.txt";
+			break;
+		case 'animals':
+			$dict = "dict/animals.txt";
+			break;
+		case 'body':
+			$dict = "dict/body.txt";
+			break;
+		default:
+			$dict = "dict/ogden.txt";
+			break;
+	}
 } else {
-	$lang = "English";
+	// default
+	$theme = "ogden";
+	$dict = "dict/ogden.txt";
 }
 
-if ($words = file('dict/ogden_basic.txt')) {
+if ($words = file($dict)) {
 
-	// initialize global vars
+	// initialize globals
 	$selected_words = [];
 	$selected_symbol = "";
 	$selected_number = "";

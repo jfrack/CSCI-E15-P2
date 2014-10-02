@@ -4,7 +4,7 @@
 	<h1>xkcd Password Generator</h1>
 
 	<div class="password">
-		<h2><?php echo ($password) ? $password : ''; ?></h2>
+		<h2><?php echo $password ? $password : ''; ?></h2>
 	</div>
 
 	<h3>Generate a new password</h3>
@@ -33,12 +33,12 @@
 		<label name="number">Include a number?</label>
 		<input type="checkbox" name="number" value="number" <?php echo ($number) ? 'checked="checked"': '' ; ?>/><br>
 
-		<label name="lang">Language:</label>
-		<select name="lang">
-			<option value="English" <?php echo $lang == "English" ? 'selected="selected"' : ''; ?>>English</option>
-			<option value="Spanish" <?php echo $lang == "Spanish" ? 'selected="selected"' : ''; ?>>Spanish</option>
-			<option value="French" <?php echo $lang == "French" ? 'selected="selected"' : ''; ?>>French</option>
-			<option value="German" <?php echo $lang == "German" ? 'selected="selected"' : ''; ?>>German</option>
+		<label name="theme">Theme:</label>
+		<select name="theme">
+			<option value="ogden" <?php echo $theme == "ogden" ? 'selected="selected"' : ''; ?>>Ogden Basic</option>
+			<option value="picture" <?php echo $theme == "picture" ? 'selected="selected"' : ''; ?>>Picture Words</option>
+			<option value="animals" <?php echo $theme == "animals" ? 'selected="selected"' : ''; ?>>Animals</option>
+			<option value="body" <?php echo $theme == "body" ? 'selected="selected"' : ''; ?>>Body Parts</option>
 		</select><br><br>
 
 		<input class="btn btn-primary" type="submit" name="submit" value="Get a Password"/>

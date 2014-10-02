@@ -26,7 +26,7 @@
 
 	<form class="form-horizontal password-options" role="form" method="POST" action="index.php">
 
-		<label name="count">Number of words:</label>
+		<label>Number of words:</label>
 		<select name="count">
 			<option value=1 <?php echo $count == 1 ? 'selected="selected"' : ''; ?>>1</option>
 			<option value=2 <?php echo $count == 2 ? 'selected="selected"' : ''; ?>>2</option>

@@ -8,15 +8,15 @@
 		<?php
 			switch ($strength) {
 				case 'Weak':
-					echo "<button type=\"button\" class=\"btn btn-danger btn-lg active\">" . $strength . "</button>";
+					echo "<button type=\"button\" class=\"btn btn-danger btn-lg btn-block active\">Weak - Try picking a longer password or use more options.</button>";
 					break;
 
 				case 'Medium':
-					echo "<button type=\"button\" class=\"btn btn-warning btn-lg active\">" . $strength . "</button>";
+					echo "<button type=\"button\" class=\"btn btn-warning btn-lg btn-block active\">Medium - Password strength OK for non-critical accounts.</button>";
 					break;
 
 				case 'Strong':
-					echo "<button type=\"button\" class=\"btn btn-success btn-lg active\">" . $strength . "</button>";
+					echo "<button type=\"button\" class=\"btn btn-success btn-lg btn-block active\">Strong - Your password is aces.</button>";
 					break;
 			}
 		?>
@@ -24,7 +24,7 @@
 
 	<h3>Generate a new password</h3>
 
-	<form class="form-horizontal" role="form" method="POST" action="index.php">
+	<form class="form-horizontal password-options" role="form" method="POST" action="index.php">
 
 		<label name="count">Number of words:</label>
 		<select name="count">

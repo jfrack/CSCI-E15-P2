@@ -8,9 +8,9 @@ This simple PHP application generates a "correct horse battery staple" style use
 was originally suggested by a [comic](http://xkcd.com/936/) on the [xkcd.com](http://xkcd.com/)
 site by [Randall Munroe](http://xkcd.com/about/).
 
-The application allows the user to specify a few option such as the number of words, uppercase
-first letter, use a symbol, include a number.  Some extra features that were added include a
-dictionary "theme" for word generation and a password strength indicator.
+The application allows the user to specify a few option such as the number of words, whether to
+capitalize the first letter of each word, use a symbol, and/or include a number.  Some extra features
+include a dictionary "theme" for word generation and a password strength indicator.
 
 ## Demo
 TBD

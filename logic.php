@@ -27,20 +27,20 @@ if (isset($_POST['theme'])) {
 	$theme = $_POST['theme'];
 	switch ($theme) {
 		case 'ogden':
-			$dict = "dict/ogden.txt";
-			break;
+		$dict = "dict/ogden.txt";
+		break;
 		case 'picture':
-			$dict = "dict/picture.txt";
-			break;
+		$dict = "dict/picture.txt";
+		break;
 		case 'animals':
-			$dict = "dict/animals.txt";
-			break;
+		$dict = "dict/animals.txt";
+		break;
 		case 'body':
-			$dict = "dict/body.txt";
-			break;
+		$dict = "dict/body.txt";
+		break;
 		default:
-			$dict = "dict/ogden.txt";
-			break;
+		$dict = "dict/ogden.txt";
+		break;
 	}
 } else {
 	// default
@@ -83,6 +83,27 @@ if ($words = file($dict)) {
 		$selected_number = rand(0, 100);
 	}
 
+	// calculate password complexity taking all checked options into consideration
+	$complexity =
+	count($selected_words) +
+	($uppercase ? 1 : 0) +
+	($selected_number ? 1 : 0) +
+	($selected_symbol ? 1 : 0);
+
+	switch ($complexity) {
+		case 4: case 5: case 6:
+		$strength = "Medium";
+		break;
+
+		case 7: case 8: case 9:
+		$strength = "Strong";
+		break;
+
+		default:
+		$strength = "Weak";
+		break;
+	}
+
 	// convert selected words array to a string and append number and/or symbol if requested
-	$password = implode("- ", $selected_words) . $selected_number . $selected_symbol;
+	$password = implode(" ", $selected_words) . $selected_number . $selected_symbol;
 }

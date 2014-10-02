@@ -5,6 +5,21 @@
 
 	<div class="password">
 		<h2><?php echo $password ? $password : ''; ?></h2>
+		<?php
+			switch ($strength) {
+				case 'Weak':
+					echo "<button type=\"button\" class=\"btn btn-danger btn-lg active\">" . $strength . "</button>";
+					break;
+
+				case 'Medium':
+					echo "<button type=\"button\" class=\"btn btn-warning btn-lg active\">" . $strength . "</button>";
+					break;
+
+				case 'Strong':
+					echo "<button type=\"button\" class=\"btn btn-success btn-lg active\">" . $strength . "</button>";
+					break;
+			}
+		?>
 	</div>
 
 	<h3>Generate a new password</h3>
@@ -19,9 +34,6 @@
 			<option value=4 <?php echo $count == 4 ? 'selected="selected"' : ''; ?>>4</option>
 			<option value=5 <?php echo $count == 5 ? 'selected="selected"' : ''; ?>>5</option>
 			<option value=6 <?php echo $count == 6 ? 'selected="selected"' : ''; ?>>6</option>
-			<option value=7 <?php echo $count == 7 ? 'selected="selected"' : ''; ?>>7</option>
-			<option value=8 <?php echo $count == 8 ? 'selected="selected"' : ''; ?>>8</option>
-			<option value=9 <?php echo $count == 9 ? 'selected="selected"' : ''; ?>>9</option>
 		</select><br>
 
 		<label name="uppercase">Uppercase first letter?</label>

@@ -9,7 +9,8 @@ was originally suggested by a [comic](http://xkcd.com/936/) on the [xkcd.com](ht
 site by [Randall Munroe](http://xkcd.com/about/).
 
 The application allows the user to specify a few option such as the number of words, uppercase
-first letter, use a symbol, include a number, and a dictionary "theme" for word generation.
+first letter, use a symbol, include a number.  Some extra features that were added include a
+dictionary "theme" for word generation and a password strength indicator.
 
 ## Demo
 TBD

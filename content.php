@@ -36,16 +36,16 @@
 			<option value=6 <?php echo $count == 6 ? 'selected="selected"' : ''; ?>>6</option>
 		</select><br>
 
-		<label name="uppercase">Uppercase first letter?</label>
+		<label>Uppercase first letter?</label>
 		<input type="checkbox" name="uppercase" value="uppercase" <?php echo ($uppercase) ? 'checked="checked"': '' ; ?>/><br>
 
-		<label name="symbol">Use a symbol?</label>
+		<label>Use a symbol?</label>
 		<input type="checkbox" name="symbol" value="symbol" <?php echo ($symbol) ? 'checked="checked"': '' ; ?>/><br>
 
-		<label name="number">Include a number?</label>
+		<label>Include a number?</label>
 		<input type="checkbox" name="number" value="number" <?php echo ($number) ? 'checked="checked"': '' ; ?>/><br>
 
-		<label name="theme">Theme:</label>
+		<label>Theme:</label>
 		<select name="theme">
 			<option value="ogden" <?php echo $theme == "ogden" ? 'selected="selected"' : ''; ?>>Ogden Basic</option>
 			<option value="picture" <?php echo $theme == "picture" ? 'selected="selected"' : ''; ?>>Picture Words</option>

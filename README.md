@@ -13,7 +13,7 @@ capitalize the first letter of each word, use a symbol, and/or include a number.
 include a dictionary "theme" for word generation and a password strength indicator.
 
 ## Demo
-TBD
+http://www.screencast.com/t/s1uLzVB4ifWi
 
 ## Details for teaching team
 No instructions needed for this project.
